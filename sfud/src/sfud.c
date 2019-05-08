@@ -26,7 +26,7 @@
  * Created on: 2016-04-23
  */
 
-#include "../inc/sfud.h"
+#include "sfud.h"
 #include <string.h>
 
 /* send dummy data for read data */
@@ -691,7 +691,7 @@ __exit:
 static sfud_err aai_write(const sfud_flash *flash, uint32_t addr, size_t size, const uint8_t *data) {
     sfud_err result = SFUD_SUCCESS;
     const sfud_spi *spi = &flash->spi;
-    uint8_t cmd_data[6], cmd_size;
+    uint8_t cmd_data[8], cmd_size;
     bool first_write = true;
 
     SFUD_ASSERT(flash);
